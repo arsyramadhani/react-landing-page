@@ -13,22 +13,37 @@ const Banner = () => {
     const setting = {
         dots: false,
         infinite: true,
-        speed: 500,
+        centerMode: true,
+        centerPadding: '160px',
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    centerPadding: '32px',
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    centerPadding: '16px',
+                },
+            },
+        ],
         nextArrow: <Arrow direction='right' hover={hover} />,
         prevArrow: <Arrow direction='left' hover={hover} />,
     };
     return (
         <div
-            className='w-full h-header-l relative '
+            className='w-full h-header-l relative mt-16 '
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}>
             <Slider {...setting}>
                 {contents.map((el, i) => (
-                    <div key={i} className='relative h-header-l'>
-                        <div className=' z-10 absolute w-12/12 lg:w-6/12 h-full px-4 lg:px-40 flex flex-col gap-4 justify-center items-start'>
+                    <div key={i} className='relative h-header-l px-2 '>
+                        <div className=' z-10 absolute w-12/12 lg:w-6/12  h-full px-4 lg:px-20 flex flex-col gap-4 justify-center items-start'>
                             <h1 className='text-5xl text-white font-bold '>
                                 Special Offer in The Holy Month of Ramadhan
                             </h1>
@@ -37,7 +52,7 @@ const Banner = () => {
                             </p>
                             <Button type='primary' text='Learn More' />
                         </div>
-                        <div className='relative w-full h-full z-0 filter brightness-50'>
+                        <div className='relative w-full h-full z-0 filter brightness-50 rounded-xl overflow-hidden'>
                             <Image
                                 layout='fill'
                                 objectFit='cover'

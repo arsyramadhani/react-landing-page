@@ -13,12 +13,12 @@ const items = [
 
 const Header = () => {
     return (
-        <div className='flex flex-row px-2 md:px-40  h-16 md:h-20 items-center  bg-yellow-400 fixed top-0 z-20 w-full shadow-lg'>
+        <div className='flex flex-row px-2 md:px-40  h-16 md:h-20 items-center  bg-white fixed top-0 z-50 w-full shadow-lg'>
             <div className='flex-1 flex items-center gap-4'>
-                <div className='font-bold text-2xl mr-4'>TheBanks</div>
+                <div className='font-bold text-2xl mr-4'>Personal</div>
                 <ul className='gap-4 hidden md:flex '>
                     {items.map(el => (
-                        <li className='text-base font-semibold'>
+                        <li className='text-base font-normal'>
                             {el.title.toUpperCase()}
                         </li>
                     ))}

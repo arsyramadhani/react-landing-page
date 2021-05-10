@@ -11,7 +11,7 @@ module.exports = {
                 'header-l': '600px',
             },
             fontFamily: {
-                sans: ['Poppins'],
+                sans: ['Lato'],
             },
         },
     },

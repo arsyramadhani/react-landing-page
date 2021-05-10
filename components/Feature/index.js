@@ -19,7 +19,7 @@ const items = [
 
 const Feature = () => {
     return (
-        <div className='h-14 relative w-full left-0 px-4 lg:px-40 bg-gray-200 '>
+        <div className='h-14 relative w-full left-0 px-8 lg:px-60 bg-gray-200 '>
             <div className='w-full h-28 py-2 -translate-y-1/2 transform  bg-white rounded-2xl border-2 border-gray-100 shadow-lg flex justify-center items-center gap-0.5'>
                 {items.map(el => (
                     <button
